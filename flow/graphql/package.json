@@ -10,11 +10,15 @@
   },
   "dependencies": {
     "graphql-yoga": "1.17.4",
-    "prisma-client-lib": "1.26.5"
+    "prisma-client-lib": "1.26.5",
+    "snyk": "^1.189.0"
   },
   "scripts": {
     "start": "babel-node src/index.js",
     "generate": "graphqlgen",
-    "flow": "flow"
-  }
+    "flow": "flow",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
